@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import Task from "./Task";
 import Styles from "./Styles";
 
 export default function TodoList({ taskList, handleCheck }) {
@@ -12,7 +11,6 @@ export default function TodoList({ taskList, handleCheck }) {
       {taskList.map((task) => (
         <div style={Styles.card}>
           <input
-            className="item"
             type="checkbox"
             checked={task.checked}
             onChange={() => {
@@ -24,23 +22,15 @@ export default function TodoList({ taskList, handleCheck }) {
             style={
               task.checked
                 ? {
-                    textDecoration: "line-through",
-                    color: "green"
+                    textDecoration: "line-through"
                   }
                 : null
             }
-            className="text-display"
           >
             {task.title}
           </p>
 
-          <p
-            style={
-              task.checked
-                ? { textDecoration: "line-through", color: "green" }
-                : null
-            }
-          >
+          <p style={task.checked ? { textDecoration: "line-through" } : null}>
             - {task.description}
           </p>
 
@@ -48,7 +38,7 @@ export default function TodoList({ taskList, handleCheck }) {
             style={
               task.checked
                 ? {
-                    color: "green",
+                    color: "orangered",
                     right: "30px",
                     bottom: "30px",
                     position: "absolute"

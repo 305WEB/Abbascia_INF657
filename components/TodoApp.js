@@ -30,7 +30,7 @@ export default function TodoApp({ handleAdd }) {
       setDescription("");
     } else {
       alert(
-        "Please enter more than 3 characters for Title and Description fields."
+        "Please enter Title and more than 3 characters for Description field."
       );
     }
   };
@@ -38,24 +38,24 @@ export default function TodoApp({ handleAdd }) {
   return (
     <div style={Styles.card}>
       <form onSubmit={handleSubmit} style={Styles.form}>
-        <h2> Add a Task to List</h2>
+        <h2> Add Item to List</h2>
         <br />
-        <div className="inputbox">
+        <div>
           <input
             onChange={handleTitleChange}
             type="text"
-            placeholder="    Task Title"
+            placeholder="    Title"
             value={title}
           />
           <input
             onChange={handleDescriptionChange}
             type="text"
-            placeholder="    Task Description"
+            placeholder="    Description"
             value={description}
           />
         </div>
         <br /> <br />
-        <button className="btn">Add Item</button>
+        <button>Add Item</button>
       </form>
     </div>
   );

@@ -2,10 +2,12 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
+    fontFamily: "Arial, San-serif",
     flex: 1,
-    backgroundColor: "#c7c7c7",
+    backgroundColor: "#539EFE",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    color: "#333"
   },
   card: {
     backgroundColor: "#fff",
